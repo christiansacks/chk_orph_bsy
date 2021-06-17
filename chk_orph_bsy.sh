@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
-WDIR="/mystic"
-
-cd $WDIR
+WDIR="/mystic"; cd $WDIR
 
 F=$(ps -ef|grep "mis poll"|grep -v grep >/dev/null; [ $? -gt 0 ] && echo "NOT RUNNING" || echo "RUNNING")
 M=$(pidof mutil; [ $? -gt 0 ] && echo "NOT RUNNING" || echo "RUNNING")
